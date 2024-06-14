@@ -108,7 +108,7 @@ This utility has the form `./minaa.exe <G> <H> [-B=bio] [-a=alpha] [-b=beta]`.
 Examples of MiNAA's usage with real data and in-depth explanations can be found in the `examples/` directory.
 
 
-### running minaa in RStudio
+### running MiNAA in RStudio
 ```
 library(igraph)
 source("plot_aligned_networks.R")
