@@ -109,7 +109,7 @@ Examples of MiNAA's usage with real data and in-depth explanations can be found 
 
 
 ### running minaa in RStudio
-library(igraph)
+library(igraph)\\
 source("plot_aligned_networks.R")
 minaa_path <- "minaa.exe"
 G <- "g.csv"
