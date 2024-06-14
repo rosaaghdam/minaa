@@ -109,7 +109,8 @@ Examples of MiNAA's usage with real data and in-depth explanations can be found 
 
 
 ### running minaa in RStudio
-library(igraph)\\
+```
+library(igraph)
 source("plot_aligned_networks.R")
 minaa_path <- "minaa.exe"
 G <- "g.csv"
@@ -130,6 +131,7 @@ adj_G <- adj_G[1:s, 1:s]
 adj_A <- adj_A[1:s, 1:s]
 alignment_GA <- alignment_GA[1:s, 1:s]
 plot_aligned_networks(adj_G, adj_A , alignment_GA,th_align = 0.2, zero_degree =1,vertex_label_value=0.1,size_aligned=5)
+```
 
 ### MiNAA Visualizaion
 <img src="logo.png" style="width:40%;" align=right>
