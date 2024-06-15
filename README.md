@@ -126,7 +126,8 @@ output_files <- list.files(output_dir, full.names = TRUE)
 adj_G <- as.matrix(read.csv("examples/g.csv", header=TRUE, row.names=1, check.names=FALSE))
 adj_A <- as.matrix(read.csv("examples/h.csv", header=TRUE, row.names=1, check.names=FALSE))
 alignment_GA <- as.matrix(read.csv("examples/alignment_matrix.csv", header=TRUE, row.names=1, check.names=FALSE))
-s=70
+#Visualizing a subset of the networks
+s=80
 adj_G <- adj_G[1:s, 1:s]
 adj_A <- adj_A[1:s, 1:s]
 alignment_GA <- alignment_GA[1:s, 1:s]
