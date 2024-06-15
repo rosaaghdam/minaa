@@ -108,7 +108,7 @@ This utility has the form `./minaa.exe <G> <H> [-B=bio] [-a=alpha] [-b=beta]`.
 Examples of MiNAA's usage with real data and in-depth explanations can be found in the `examples/` directory.
 
 
-### running MiNAA in RStudio
+### running MiNAA in R
 ```
 library(igraph)
 source("examples/plot_aligned_networks.R")
@@ -125,7 +125,7 @@ system(command)
 output_files <- list.files(output_dir, full.names = TRUE)
 adj_G <- as.matrix(read.csv("examples/g.csv", header=TRUE, row.names=1, check.names=FALSE))
 adj_A <- as.matrix(read.csv("examples/h.csv", header=TRUE, row.names=1, check.names=FALSE))
-alignment_GA <- as.matrix(read.csv("examples/alignments/G-H/alignment_matrix.csv", header=TRUE, row.names=1, check.names=FALSE))
+alignment_GA <- as.matrix(read.csv("examples/alignment_matrix.csv", header=TRUE, row.names=1, check.names=FALSE))
 s=70
 adj_G <- adj_G[1:s, 1:s]
 adj_A <- adj_A[1:s, 1:s]
@@ -134,7 +134,7 @@ plot_aligned_networks(adj_G, adj_A , alignment_GA,th_align = 0.2, zero_degree =1
 ```
 
 ### MiNAA Visualizaion
-<img src="logo.png" style="width:40%;" align=right>
+<img src="examples/aligned_networks_plot.png" style="width:40%;" align=right>
 ## Simulations in the Manuscript
 
 All scripts and instructions to reproduce the analyses in the manuscript can be found in the `simulations/` directory.
