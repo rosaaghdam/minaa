@@ -111,21 +111,21 @@ Examples of MiNAA's usage with real data and in-depth explanations can be found 
 ### running MiNAA in RStudio
 ```
 library(igraph)
-source("plot_aligned_networks.R")
-minaa_path <- "minaa.exe"
-G <- "g.csv"
-H<- "h.csv"
-bio<-"bio.csv"
-output_dir <- "alignments/"
+source("examples/plot_aligned_networks.R")
+minaa_path <- "examples/minaa.exe"
+G <- "examples/g.csv"
+H<- "examples/h.csv"
+bio<-"examples/bio.csv"
+output_dir <- "examples/alignments/"
 alpha <- 0.5
 beta <- 0.3
 st <- 0 
 command <- sprintf("./minaa.exe %s %s -st=%d -B=%s", G, H, st, bio)
 system(command)
 output_files <- list.files(output_dir, full.names = TRUE)
-adj_G <- as.matrix(read.csv("g.csv", header=TRUE, row.names=1, check.names=FALSE))
-adj_A <- as.matrix(read.csv("h.csv", header=TRUE, row.names=1, check.names=FALSE))
-alignment_GA <- as.matrix(read.csv("alignments/G-H/alignment_matrix.csv", header=TRUE, row.names=1, check.names=FALSE))
+adj_G <- as.matrix(read.csv("examples/g.csv", header=TRUE, row.names=1, check.names=FALSE))
+adj_A <- as.matrix(read.csv("examples/h.csv", header=TRUE, row.names=1, check.names=FALSE))
+alignment_GA <- as.matrix(read.csv("examples/alignments/G-H/alignment_matrix.csv", header=TRUE, row.names=1, check.names=FALSE))
 s=70
 adj_G <- adj_G[1:s, 1:s]
 adj_A <- adj_A[1:s, 1:s]
